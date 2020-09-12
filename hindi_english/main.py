@@ -7,32 +7,28 @@ import json
 #the number of extra keywords declared 
 count = 0 
 
-
 # dictionary for hindi to english words
 dic = {} 
-
 
 # dictionary for english to hindi words 
 rev_dic = {} 
 
-
 #loading the global dictionary later include the values for the included libraries 
-with open('map.json') as json_file: 
+with open("map.json") as json_file: 
      
     
     dic = json.load(json_file) 
 
-
 #loding the reverse dictionary 
-with open('rev_map.json') as json_file: 
+with open("rev_map.json") as json_file: 
     
     
     rev_dic = json.load(json_file) 
 
-
-
 # for converting text into a list of strings 
 def conv(stx ) :
+    # to be improved 
+
     cur ="" 
     lis = [] 
     for i in stx :
@@ -56,7 +52,6 @@ def conv(stx ) :
     
     return lis 
 
-
 # for converting the list of strings into text
 def rev_con(lis ) :
     ans = ""
@@ -64,14 +59,9 @@ def rev_con(lis ) :
         ans = ans + i 
     return  ans 
 
-
-
 # for running a python 
 def run() :
     subprocess.call([r'compil\command.bat'])
-
-
-
 
 
 # for finding and declaring keywords 
@@ -117,10 +107,6 @@ def hindi_eng( strin ) :
     return out
 
 
-
-
-
-
 #for converting the english to hindi along wiht the added files 
 def eng_hindi(strin ) : 
     lis = conv(strin ) 
@@ -145,16 +131,56 @@ def doi() :
     f.close() 
     run()
 
+    f = open("flags\output.txt" , "w" ,  encoding='utf-8')
 
+    st = open("compil\error.txt" , "r" ,  encoding='utf-8')
 
+    ss = st.read() 
+    f.write(ss) 
 
+    st.close()
 
+    st = open("compil\out.txt" , "r" ,  encoding='utf-8')
+
+    ss = st.read() 
+    f.write(ss) 
+
+    st.close()
+      
     
-    
-
-
-
+    f.close() 
  
 doi() 
 
+def running() : 
+    while(1) :
+        
+        st = open("flags\inpready.txt" , "r" ,  encoding='utf-8')
 
+        ss = st.read() 
+        
+        st.close()
+        if ss == "1" :
+            break
+    
+    st = open("flags\inpready.txt" , "w" ,  encoding='utf-8')
+
+    st.write("0")
+         
+    st.close()
+
+        
+
+        
+    doi() 
+
+    st = open("flags\outready.txt" , "w" ,  encoding='utf-8')
+
+    st.write("1")
+
+        
+    st.close()
+        
+    running()
+
+running()
