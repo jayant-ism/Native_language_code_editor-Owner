@@ -1,0 +1,1 @@
+python code.py > out.txt 2> error.txt
