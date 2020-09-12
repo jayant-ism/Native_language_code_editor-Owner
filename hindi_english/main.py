@@ -30,24 +30,29 @@ with open('rev_map.json') as json_file:
     rev_dic = json.load(json_file) 
 
 
+
 # for converting text into a list of strings 
 def conv(stx ) :
     cur ="" 
     lis = [] 
     for i in stx :
       
-        if (i ==" ") :
-            if cur != "" or cur != " " : 
-                lis.append(cur) 
+        if (i == ' ' or i== '\n' ) :
             
-            cur = "" 
+            lis.append(cur) 
+            
+            cur = ""
+            cur = cur+ i 
+            lis.append(cur)
+            cur = ""
             continue 
         cur = cur+ i 
 
-    if cur != "" and cur != " " : 
+    if cur != "" : 
         lis.append(cur) 
             
             
+
     
     return lis 
 
@@ -56,7 +61,7 @@ def conv(stx ) :
 def rev_con(lis ) :
     ans = ""
     for i in lis  :
-        ans = ans+" " + i 
+        ans = ans + i 
     return  ans 
 
 
@@ -68,12 +73,17 @@ def run() :
 
 
 
+
 # for finding and declaring keywords 
 
 def val( sr ) :
     global count 
+    
+    
+    
     if sr in dic.keys() :
         return dic[sr] 
+    
     count += 1 
 
     dic[sr] = "as" + str(count) 
@@ -98,7 +108,7 @@ def hindi_eng( strin ) :
 
     for i in lis : 
         cnn =  val(i) 
-        print(cnn)
+        
         out_lis.append(cnn ) 
     
   
@@ -125,22 +135,14 @@ def eng_hindi(strin ) :
 
 def doi() :
     f = open("flags\input.txt", "r" , encoding='utf-8')
-    st =  f.read() 
-
-
-
-
+    st =  f.read()
+    print(st)  
+    st = hindi_eng(st )     
     
-    
-    st = hindi_eng(st ) 
-    
-    print(st)
     out = open("compil/code.py" , "w")
     out.write(st) 
-
     out.close() 
     f.close() 
-
     run()
 
 
