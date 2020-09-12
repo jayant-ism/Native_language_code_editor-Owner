@@ -63,7 +63,7 @@ def rev_con(lis ) :
 
 # for running a python 
 def run() :
-    subprocess.call([r'command.bat'])
+    subprocess.call([r'compil\command.bat'])
 
 
 
@@ -135,11 +135,21 @@ def doi() :
     st = hindi_eng(st ) 
     
     print(st)
-    out = open("code.py" , "w")
+    out = open("compil/code.py" , "w")
     out.write(st) 
 
     out.close() 
     f.close() 
+
+    run()
+
+
+
+
+
+    
+    
+
 
 
  

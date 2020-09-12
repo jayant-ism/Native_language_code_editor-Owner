@@ -1,4 +1,0 @@
-Traceback (most recent call last):
-  File "code.py", line 2, in <module>
-    print(sda );
-NameError: name 'sda' is not defined
