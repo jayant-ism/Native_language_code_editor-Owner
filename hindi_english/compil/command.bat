@@ -1,1 +1,0 @@
-python compil\code.py > compil\out.txt 2> compil\error.txt
