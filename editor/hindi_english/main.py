@@ -63,7 +63,9 @@ def hindi_eng( strin ) :
     itr = 0 
 
     while itr <  leng : 
+  
         
+
         if strin[itr] == "'" :
             while itr < leng : 
                 if strin[itr] == "'" : 
@@ -90,7 +92,7 @@ def hindi_eng( strin ) :
             continue 
         cur = ""
         while itr < leng  : 
-            if strin[itr ] ==" " :
+            if strin[itr ] ==" " or strin[itr ] =="(" or strin[itr ] =="{" or strin[itr ] =="["   :
                 break 
             cur = cur + strin[itr] 
             itr+= 1 
