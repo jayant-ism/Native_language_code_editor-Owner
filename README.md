@@ -12,21 +12,23 @@ We can code python , java script , c++ etc in our natvie language like hindi , t
 We aim to remove the barrier of language from the IT sector. Along with its easy to code in the language that a person is most familier with.
 We provide options for choosing the programming languages and the respective native language
 
-This project aims at running the python code. We can process different languages just by specifying the compiler used in "editor\hindi_english\compil\command.bat" file and changing the respective file name in the doi function of the main.py .
+This project aims at running the python code. We can process different languages just by specifying the compiler used in
+** "editor\hindi_english\compil\command.bat" ** file and changing the respective file name in the doi function of the main.py .
 
 
 ## How to use it :
 Make sure that the keywords that are going to be used is alright
-If not, one can add/ change/ remove by running to to_map.py in "editor\hindi_english" directory after it
+If not, one can add/ change/ remove by running to to_map.py in  " **editor\hindi_english** "  directory after it
     we just have to give input as "n" in first line denoting number of parameters we need to change 
     followed by next n line containing 2 words one in native language and other in english for the keyword of the programing language 
 
 
-After it we need to run "editor\hindi_english\main.py" the backend surver which is responsible for running and processing the code.
-After it we need to launch the django server through the command prompt code  python manage.py runserver  in the editor directory
+After it we need to run "**editor\hindi_english\main.py**" the backend surver which is responsible for running and processing the code.
+After it we need to launch the django server through the command prompt code  **python manage.py runserver**  in the editor directory
 
-Once it is done we just need to write our code in any native language the backend server will automatically match it throught the keywords and compile it then execute it
-We need not to select the native language used , but for help a box is provided with all the keywords in native language mapped to tose in the english for begineers
+Once it is done we just need to write our code in any native language the backend server will automatically match it throught the keywords
+and compile it then execute it We need not to select the native language used , but for help a box is provided with all the keywords in native
+language mapped to those in the english.
 
 Then just press run 
 
