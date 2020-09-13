@@ -71,6 +71,7 @@ def  eval(request) :
 
 
     out.close() 
+    print(ans)
 
 
     asd = [strin  , ans ]

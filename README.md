@@ -1,41 +1,32 @@
 Native language code editor 
 
-• A code editor is designed for writing the python code in any native language.
-• Later on it will be extended to C++ and other languages.
+What is Native language code editor  ?? 
+Native language code editor is a code editor that  allows us to code any programming language in our native language.
 
-How it works ? 
+We can code python , java script , c++ etc in our natvie language like hindi , telgu ,tamil
 
+Why Native language code editor  ??
 
+We aim to remove the barrier of language from the IT sector. Along with its easy to code in the language that a person is most familier with.
+We provide options for choosing the programming languages and the respective native language
 
-It have for parts 
-
-
-HTML front end Will take the python code as input and process it 
-
-
+This project aims at running the python code. We can process different languages just by specifying the compiler used in "editor\hindi_english\compil\command.bat" file and changing the respective file name in the doi function of the main.py .
 
 
+How to use it :
+Make sure that the keywords that are going to be used is alright
+If not, one can add/ change/ remove by running to to_map.py in "editor\hindi_english" directory after it
+    we just have to give input as "n" in first line denoting number of parameters we need to change 
+    followed by next n line containing 2 words one in native language and other in english for the keyword of the programing language 
 
 
+After it we need to run "editor\hindi_english\main.py" the backend surver which is responsible for running and processing the code.
+After it we need to launch the django server through the command prompt code  python manage.py runserver  in the editor directory
 
-Expected GUI 
-<img width="1268" alt="Screenshot 2020-09-13 at 1 11 31 AM" src="https://user-images.githubusercontent.com/65666089/93003747-e111ea00-f55e-11ea-9245-225126e66768.png">
+Once it is done we just need to write our code in any native language the backend server will automatically match it throught the keywords and compile it then execute it
+We need not to select the native language used , but for help a box is provided with all the keywords in native language mapped to tose in the english for begineers
 
+Then just press run 
 
+Your code along with the output  and error will be displayed and the code arena will be cleared.
 
-
-
-
-All the output will be extracted from a text file and will be inserted inside the HTML text file.
-
-For communication 
-
-4 txt files namely 
-
-•js.ready.txt - if “1” then declares that input is ready to be taken.
-
-•js.code.txt- the code input (in native language) from HTML.
-
-•py.ready.txt- if “1” then declare that output is ready.
-
-•py.out.txt- the output of the python command in native language will be present.
