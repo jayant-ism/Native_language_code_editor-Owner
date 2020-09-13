@@ -74,7 +74,7 @@ def  eval(request) :
 
 
     asd = [strin  , ans ]
-    prev_ceod.append(asd ) 
+    prev_ceod = [asd ] 
 
     ddsr =[] 
 
