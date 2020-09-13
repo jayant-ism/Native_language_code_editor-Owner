@@ -26,6 +26,8 @@ def  eval(request) :
 
     out.close() 
     
+    print(strin)
+
     
     out = open("hindi_english/flags/inpready.txt" , "w" ,  encoding='utf-8')
  
@@ -33,11 +35,12 @@ def  eval(request) :
  
     out.write("1")
 
+
     out.close() 
 
 
     while(1) :
-        inc =1 
+        
         out = open("hindi_english/flags/outready.txt" , "r" ,  encoding='utf-8')
  
         ss= out.read()
@@ -50,11 +53,14 @@ def  eval(request) :
  
     
  
+
     ans = out.read()
 
 
     out.close() 
- 
+    
+    print(ans) 
+
     
     
     out = open("hindi_english/flags/outready.txt" , "w" ,  encoding='utf-8')
@@ -65,12 +71,26 @@ def  eval(request) :
 
 
     out.close() 
-     
-    print(ans)
+
 
     asd = [strin  , ans ]
     prev_ceod.append(asd ) 
 
+    ddsr =[] 
+
+
+
+    f = open("hindi_english/map.json" , encoding="utf-8")
     
-    
-    return render(request ,'home.html' , {'prev_ceod' : prev_ceod } )  
+    v =  json.load(f) 
+
+    for k in v.keys() : 
+        sda = [ k , v[k] ] 
+        ddsr.append(sda) 
+
+
+
+
+
+
+    return render(request ,'home.html' , {'prev_ceod' : prev_ceod , 'map' : ddsr } )  

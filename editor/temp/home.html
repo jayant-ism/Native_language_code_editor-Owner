@@ -6,80 +6,8 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
    
     
-    <style>
-
-      *{
-        padding: 0px;
-        margin: 0px;
-    }
-    #logo{
-        border-bottom: 3px solid gray;
-        height: 190px;
-        display: flex;
-        flex-direction: column;
     
-    
-    }
-    .about{
-        float: right;
-        margin: 75px 40px;
-        width: 200px;
-        height: 50px;
-        background-color: black;
-        color:white;
-    }
-    .logo{
-       
-        border: 3px solid gray;
-        position: absolute;
-        width: 300px;
-        height: 150px;
-       margin: 20px 20px;
-    }
-    .container{
-        
-        position: relative;
-        top: 0px;
-    
-    }
-    .container h1{
-        text-align: center;
-        font-size: xx-large;
-        
-    }
-    
-    
-    .input{
-        position:absolute;
-        top: 250px;
-        left: 0px;
-        height: 100px;
-        display: flex;
-        flex-wrap: wrap;
-    }
-    textarea{
-        /* resize: both; */
-        resize: none;
-        border: 6px solid gray;
-        margin: 0px;
-    width: 1008px;
-    height: 490px;
-    }
-    .intro{
-        width: 300px;
-        margin: 30px 20px;
-    
-    }
-    .abc{
-        position: absolute;
-        left: 10px;
-        top: 500px;
-        width: 60px;
-    }
-
-
-    </style>
-    <title>Document</title>
+    <title>Native_language_editor</title>
 </head>
 <body>
 
@@ -96,17 +24,19 @@
          
     </header> 
 
-    <div id="prev">
+    <div class="container"  id="prev">
 
       {%  for s in prev_ceod %}
 
-      <div>
+      <div class="container" style="padding: 10px 10px 10px 10px ;">
         {% for i in s %} 
-        <div>
-          {{i}}
+        <div class= "border  container" style="padding: 10px 10px 10px 10px ;">
+          <p>
+            {{i}}
+          </p>
         </div>
         {%endfor %}
-      </div>
+      </div class="border border-dark container" style="padding: 10px 10px 10px 10px ;">
 
       {%endfor %}
      
@@ -119,82 +49,127 @@
         <h1> Code in your native language</h1>
     </div>
 
-    <div class="row"> 
-<form action="sub"> 
+    <div class="row">
+      <div class="col-lg-6" style="padding-top:10px;">
+       
+<div class="container"> 
+  <div>
+    
+Type your code in any language
+
+  </div>
+  <form action="sub" > 
    
 
   
   
   
-    <textarea name="code" id="" cols="30" rows="5"> // Write code in this online editor and run it.
+    <textarea class="form-group" role="form" name="code"  cols="80" rows="5"> 
+      
+      # Write code in this online editor and run it.
 
     </textarea>
-    <button type = "submit" >Run</button>
+    <button class="btn btn-primary" type = "submit" >Run</button>
 
    
+
 
 
 
 </form>
 
 
-
+</div>
+      </div>
+      <div class="col-sm-4" style="background-color:pink;">
+     
+     
         <div class="intro">
 
-        <div class="accordion" id="accordionExample">
-            <div class="card">
-              <div class="card-header" id="headingOne">
-                <h2 class="mb-0">
-                  <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                    English
-                  </button>
-                </h2>
-              </div>
-          
-              <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
-                <div class="card-body">
-                  Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+          <div class="accordion" id="accordionExample">
+              <div class="card">
+                <div class="card-header" id="headingOne">
+                  <h2 class="mb-0">
+                    <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                      Hindi
+                    </button>
+                  </h2>
+                </div>
+            
+                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                  <div class="card-body">
+                   
+                  
+                  
+                  
+                    <div class="border border-dark" id="prev">
+  
+                      {%  for s in map %}
+                
+                      <div class="row " style="padding: 10px 10px 10px 10px ;">
+                        {% for i in s %} 
+                        <div class= "col-*-*" style="padding: 10px 10px 10px 10px ;">
+                          {{i}}
+                        </div>
+                        {%endfor %}
+                      </div class="border border-dark container" style="padding: 10px 10px 10px 10px ;">
+                
+                      {%endfor %}
+                     
+                
+                    </div>
+                  
+                  
+                  
+                  
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="card">
-              <div class="card-header" id="headingTwo">
-                <h2 class="mb-0">
-                  <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                    Hindi
-                  </button>
-                </h2>
-              </div>
-              <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
-                <div class="card-body">
-                  Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+              <div class="card">
+                <div class="card-header" id="headingTwo">
+                  <h2 class="mb-0">
+                    <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                      Sanskrit
+                    </button>
+                  </h2>
+                </div>
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                  <div class="card-body">
+                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="card">
-              <div class="card-header" id="headingThree">
-                <h2 class="mb-0">
-                  <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                    Tamil            
-                </button>
-                </h2>
-              </div>
-              <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
-                <div class="card-body">
-                  Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+              <div class="card">
+                <div class="card-header" id="headingThree">
+                  <h2 class="mb-0">
+                    <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                      Tamil            
+                  </button>
+                  </h2>
+                </div>
+                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                  <div class="card-body">
+                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-  
-        
-    </div> 
-  
-  
-  
-  
+    
+          
+      </div> 
+    
 
+
+     
+     
+     
+      </div>
+    </div>
+
+
+
+    
 </body>
 </html>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>

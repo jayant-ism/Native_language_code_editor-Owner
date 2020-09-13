@@ -1,32 +1,56 @@
- // Write code in this online editor and run it.
+# lets code in hindi 
 
 
 
-    dasdasd
-
-sda
 
 
 
-asd
 
-asd
-
-sad
-
-ds
-
-sda
-
-sda
-
-asd
+as1 = [ 0 , 0 ,0 ] 
 
 
 
-sda
 
-sda
 
-sad
+
+
+as2 = 0 
+
+
+
+
+
+
+
+for as3 in as1 : 
+
+
+
+
+
+
+
+     if as3 == 0 :
+
+
+
+
+
+
+
+          as2 += 1
+
+
+
+
+
+
+
+print ( as2  )
+
+
+
+
+
+
 
