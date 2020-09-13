@@ -91,6 +91,4 @@ def  eval(request) :
 
 
 
-
-
     return render(request ,'home.html' , {'prev_ceod' : prev_ceod , 'map' : ddsr } )  
