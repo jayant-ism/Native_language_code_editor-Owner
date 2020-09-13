@@ -1,11 +1,13 @@
-Native language code editor 
+![GitHub Logo](https://github.com/jayant-ism/Native_language_code_editor-Owner/blob/master/img/logo.jpg)
 
-What is Native language code editor  ?? 
+# Native language code editor 
+
+## What is Native language code editor  ?? 
 Native language code editor is a code editor that  allows us to code any programming language in our native language.
 
 We can code python , java script , c++ etc in our natvie language like hindi , telgu ,tamil
 
-Why Native language code editor  ??
+## Why Native language code editor  ??
 
 We aim to remove the barrier of language from the IT sector. Along with its easy to code in the language that a person is most familier with.
 We provide options for choosing the programming languages and the respective native language
@@ -13,7 +15,7 @@ We provide options for choosing the programming languages and the respective nat
 This project aims at running the python code. We can process different languages just by specifying the compiler used in "editor\hindi_english\compil\command.bat" file and changing the respective file name in the doi function of the main.py .
 
 
-How to use it :
+## How to use it :
 Make sure that the keywords that are going to be used is alright
 If not, one can add/ change/ remove by running to to_map.py in "editor\hindi_english" directory after it
     we just have to give input as "n" in first line denoting number of parameters we need to change 
