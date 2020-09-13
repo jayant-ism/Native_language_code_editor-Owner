@@ -33,3 +33,15 @@ Then just press run
 Your code along with the output  and error will be displayed and the code arena will be cleared.
 
 ## GUI description
+![GitHub Logo](https://github.com/jayant-ism/Native_language_code_editor-Owner/blob/master/img/Screenshot%20(132).png)
+
+The top portion contain the part of the code that was exicuted just before along with the results 
+Then comes the coding arena where we can put our code in any language. 
+At the right we have the keywords that we chose.
+
+## Dependencies 
+1. Django 
+2. Compiler of the language that you are goung to use
+
+
+
