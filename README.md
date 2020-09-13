@@ -32,3 +32,4 @@ Then just press run
 
 Your code along with the output  and error will be displayed and the code arena will be cleared.
 
+## GUI description
