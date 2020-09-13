@@ -1,6 +1,8 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 
+prev_ceod = []
+
 #inport some stuff
 import subprocess
 import json 
@@ -15,6 +17,7 @@ def  eval(request) :
     print(request.GET['code']) 
 
     strin =  request.GET['code'] 
+    
     out = open("hindi_english/flags/input.txt" , "w" ,  encoding='utf-8')
  
  
@@ -65,4 +68,9 @@ def  eval(request) :
      
     print(ans)
 
-    return render(request ,'home.html' )  
+    asd = [strin  , ans ]
+    prev_ceod.append(asd ) 
+
+    
+    
+    return render(request ,'home.html' , {'prev_ceod' : prev_ceod } )  

@@ -25,39 +25,6 @@ with open("rev_map.json") as json_file:
     
     rev_dic = json.load(json_file) 
 
-# for converting text into a list of strings 
-def conv(stx ) :
-    # to be improved 
-
-    cur ="" 
-    lis = [] 
-    for i in stx :
-      
-        if (i == ' ' or i== '\n' ) :
-            
-            lis.append(cur) 
-            
-            cur = ""
-            cur = cur+ i 
-            lis.append(cur)
-            cur = ""
-            continue 
-        cur = cur+ i 
-
-    if cur != "" : 
-        lis.append(cur) 
-            
-            
-
-    
-    return lis 
-
-# for converting the list of strings into text
-def rev_con(lis ) :
-    ans = ""
-    for i in lis  :
-        ans = ans + i 
-    return  ans 
 
 # for running a python 
 def run() :
@@ -87,25 +54,51 @@ def val( sr ) :
 
 def hindi_eng( strin ) :
     
-    lis = conv(strin ) 
 
-    #for i in lis : 
-    #    print( i )
-
-    out_lis =[] 
-    
+    leng =  len(strin) 
+    out  ="" 
     
 
-    for i in lis : 
-        cnn =  val(i) 
+
+    itr = 0 
+
+    while itr <  leng : 
         
-        out_lis.append(cnn ) 
+        if strin[itr] == "'" :
+            while itr < leng : 
+                if strin[itr] == "'" : 
+                    out = out + strin[itr] 
+                    itr += 1 
+                    break 
+                out = out + strin[itr] 
+                itr +=1 
+            continue 
+        
+        if strin[itr] == '"' :
+            while itr < leng : 
+                if strin[itr] == '"' : 
+                    out = out + strin[itr] 
+                    itr += 1 
+                    break 
+                out = out + strin[itr] 
+                itr +=1 
+            continue 
+
+        if strin[itr] <= chr( 128 ) :
+            out = out + strin[itr] 
+            itr += 1 
+            continue 
+        cur = ""
+        while itr < leng  : 
+            if strin[itr ] ==" " :
+                break 
+            cur = cur + strin[itr] 
+            itr+= 1 
+        
+        out  = out + val(cur) 
+
+    return  out
     
-  
-
-    out =  rev_con(out_lis ) 
-    return out
-
 
 #for converting the english to hindi along wiht the added files 
 def eng_hindi(strin ) : 
@@ -120,7 +113,7 @@ def eng_hindi(strin ) :
     return out 
 
 def doi() :
-    f = open("flags\input.txt", "r" , encoding='utf-8')
+    f = open("flags/input.txt", "r" , encoding='utf-8')
     st =  f.read()
     print(st)  
     st = hindi_eng(st )     

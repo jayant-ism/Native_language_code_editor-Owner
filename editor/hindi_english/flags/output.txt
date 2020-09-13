@@ -1,1 +1,4 @@
-1
+  File "compil\code.py", line 1
+    // Write code in this online editor and run it.
+    ^
+IndentationError: unexpected indent
