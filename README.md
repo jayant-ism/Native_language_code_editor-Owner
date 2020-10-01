@@ -5,7 +5,7 @@
 ## What is Native language code editor  ?? 
 Native language code editor is a code editor that  allows us to code any programming language in our native language.
 
-We can code python , java script , c++ etc in our natvie language like hindi , telgu ,tamil
+We can code python , java script , c++ etc in our natvie language like hindi,telgu,tamil.
 
 ## Why Native language code editor  ??
 
@@ -20,11 +20,11 @@ This project aims at running the python code. We can process different languages
 Make sure that the keywords that are going to be used is alright
 If not, one can add/ change/ remove by running to to_map.py in  " **editor\hindi_english** "  directory after it
     we just have to give input as "n" in first line denoting number of parameters we need to change 
-    followed by next n line containing 2 words one in native language and other in english for the keyword of the programing language 
+    followed by next n line containing 2 words one in native language and other in english for the keyword of the programing language. 
 
 
 After it we need to run "**editor\hindi_english\main.py**" the backend surver which is responsible for running and processing the code.
-After it we need to launch the django server through the command prompt code  **python manage.py runserver**  in the editor directory
+After it we need to launch the django server through the command prompt code  **python manage.py runserver**  in the editor directory.
 
 Once it is done we just need to write our code in any native language the backend server will automatically match it throught the keywords
 and compile it then execute it We need not to select the native language used , but for help a box is provided with all the keywords in native
