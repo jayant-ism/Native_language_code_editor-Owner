@@ -43,7 +43,7 @@ At the right we have the keywords that we chose.
 
 ## Dependencies 
 1. Django 
-2. Compiler of the language that you are goung to use
+2. Compiler of the language that you are going to use
 
 
 ##Demo Link :- https://drive.google.com/file/d/1m1oCvlzfCipVhcXMhun_6suvToYBWNiG/view
